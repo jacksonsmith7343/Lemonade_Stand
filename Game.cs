@@ -14,9 +14,26 @@ namespace LemonadeStand_3DayStarter
         private int currentDay;
 
         //constructor (Spawner)
+        public Game()
+        {
+            player = new Player();
+            days = new List<Day>();
+
+        }
+
 
 
         //member methods (Can do)
+        public void RunGame()
+        {
+            Menu();
+        }
+
+        public void Menue()
+        {
+
+        }
+
 
 
     }

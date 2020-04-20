@@ -23,6 +23,14 @@ namespace LemonadeStand_3DayStarter
             pricePerCup = .25;
         }
 
+        public void StoreMenu()
+        {
+            //cw options
+            //get user input
+            //swtich case
+            //based user input is call certain Sell.. method
+        }
+
         // member methods (CAN DO)
         public void SellLemons(Player player)
         {

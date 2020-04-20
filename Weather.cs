@@ -14,44 +14,45 @@ namespace LemonadeStand_3DayStarter
         private List <string> weatherConditions;
         public int temperature;
         public string condition;
-
+        private Random rnd;
 
 
         //Constructor (Spawner)
 
         public Weather()
         {
-            weatherConditions = new List<string>();
-            weatherConditions.Add("rain");
-            weatherConditions.Add("sunny");
-            weatherConditions.Add("overcast");
-            weatherConditions.Add("partly cloudy");
-
-
-            Random rnd = new Random();
-
-            int i = rnd.Next(0, 3);
-
-            condition = weatherConditions[i];
+            rnd = new Random();
+            weatherConditions = new List<string>() { "rain", "sunny", "overcast", "partly cloudy" };
+            DailyWeatherCondition();
+            DailyTemperature();
 
         }
 
-        public int dailyTemperature()
+        public void DailyTemperature()
         {
-            Random rnd = new Random();
-
-            int i = rnd.Next(60, 90);
-
-            temperature = i;
+            temperature = rnd.Next(60, 90);
+            //TODO finish switch cases
+            switch (condition)
+            {
+                case "rain":
+                    temperature = rnd.Next(40, 60);
+                    break;
+                case "sunny":
+                    temperature = rnd.Next(60, 100);
+                    break;
+            }
         }
 
-        
        
-        
-
 
         //member methods (Can do)
 
+        public void DailyWeatherCondition()
+        {
+            int i = rnd.Next(0, 4);
+
+            condition = weatherConditions[i];
+        }
 
 
     }
