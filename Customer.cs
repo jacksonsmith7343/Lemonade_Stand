@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Program
+    class Customer
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        //member variables (Has a)
+
+
+
+        //constructor (Spawner)
+
+
+        //member methods (Can do)
+
+
     }
 }

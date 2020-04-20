@@ -9,8 +9,12 @@ namespace LemonadeStand_3DayStarter
     class Player
     {
         // member variables (HAS A)
+        public string name;
         public Inventory inventory;
         public Wallet wallet;
+       
+
+        
 
         // constructor (SPAWNER)
         public Player()
@@ -20,5 +24,26 @@ namespace LemonadeStand_3DayStarter
         }
 
         // member methods (CAN DO)
+
+        public void PurchaseLemons()
+        {
+
+        }
+
+        public void PurchaseSugar()
+        {
+
+        }
+
+        public void PurchaseIce()
+        {
+
+        }
+
+        public void PurchaseCups()
+        {
+
+        }
+        
     }
 }
