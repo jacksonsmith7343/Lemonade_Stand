@@ -24,6 +24,11 @@ namespace LemonadeStand_3DayStarter
         }
 
         // member methods (CAN DO)
+        public void CheckInventory()
+        {
+
+        }
+
         public void AddLemonsToInventory(int numberOfLemons)
         {
             for(int i = 0; i < numberOfLemons; i++)

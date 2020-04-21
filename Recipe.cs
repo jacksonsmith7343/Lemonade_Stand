@@ -32,27 +32,20 @@ namespace LemonadeStand_3DayStarter
             {
                 case "1":
                     Console.WriteLine("How many lemons would you like in your recipe?");
-                    userInput = Convert.ToInt32.(Console.ReadLine());
-                    userInput = amountOfLemons;
-                    
-                    //userinput for how many lemons
-                    //convert userinput into int, then set amount of lemons equal 
+                    amountOfLemons = Convert.ToInt32(Console.ReadLine());
                     break;
                 case "2":
                     Console.WriteLine("How many sugar cubes would you like in your recipe?");
-
+                    amountOfSugarCubes = Convert.ToInt32(Console.ReadLine());
                     break;
                 case "3":
                     Console.WriteLine("How many ice cubes would you like in your recipe?");
-
+                    amountOfIceCubes = Convert.ToInt32(Console.ReadLine());
                     break;
                 case "4":
                     Console.WriteLine("What price would you like to set per cup?");
-
-                    //convert to double
+                    pricePerCup = Convert.ToDouble(Console.ReadLine());
                     break;
-                case "5":
-                    
                 default:
                     Console.WriteLine("Try again. Choose an item to adjust to your recipe or return to the main menu.");
                     break;

@@ -17,12 +17,17 @@ namespace LemonadeStand_3DayStarter
 
         public Day()
         {
-            
+            weather = new Weather();
+            customers = new List<Customer>();
 
         }
 
         //member methods (Can do)
-
+        public void BeginDay()
+        {
+            weather.DailyTemperature();
+            weather.DailyWeatherCondition();
+        }
 
     }
 }

@@ -31,21 +31,13 @@ namespace LemonadeStand_3DayStarter
 
         // member methods (CAN DO)
 
-        //void PurchaseItems();
-        //{
-        //    SellSugarCubes();
-        //    SellLemons();
-        //    SellIceCubes();
-        //    SellCups();
-        //}
-
+       
     public void SetName()
     {
             Console.WriteLine("Plase eneter your name");
             name = Console.ReadLine();
     }
-    //player should be able to go to the store and purchase items
-    //player will use money in their wallet to purchase items
+    
 
 
 
