@@ -9,7 +9,8 @@ namespace LemonadeStand_3DayStarter
     class Day
     {
         //member variables (Has a)
-        public List <Day> dayOfWeek;
+        public Weather weather;
+        public List<Customer> customers;
 
 
         //constructor (Spawner)

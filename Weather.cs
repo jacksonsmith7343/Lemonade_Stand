@@ -40,6 +40,16 @@ namespace LemonadeStand_3DayStarter
                 case "sunny":
                     temperature = rnd.Next(60, 100);
                     break;
+                case "overcast":
+                    temperature = rnd.Next(60, 80);
+                    break;
+                case "partly coudy":
+                    temperature = rnd.Next(40, 60);
+                    break;
+               
+
+
+
             }
         }
 

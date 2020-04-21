@@ -8,5 +8,8 @@ namespace LemonadeStand_3DayStarter
 {
     class Pitcher
     {
+        public int cupsLeftInPitcher;
+
+
     }
 }

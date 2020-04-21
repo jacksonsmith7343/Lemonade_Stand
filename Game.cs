@@ -12,6 +12,7 @@ namespace LemonadeStand_3DayStarter
         private Player player;
         private List<Day> days;
         private int currentDay;
+        public Store store;
 
         //constructor (Spawner)
         public Game()
@@ -27,11 +28,35 @@ namespace LemonadeStand_3DayStarter
         public void RunGame()
         {
             Menu();
+           
+           
         }
 
-        public void Menue()
+        public void Menu()
         {
-
+            Console.WriteLine("What would you like to do? \n1) Store\n2)Set Recipe\n3) Check Inventory\n4) Start Day");
+            string userInput = Console.ReadLine();
+            switch (userInput)
+            {
+                case "1":
+                    Store store = new Store();
+                    store.StoreMenu(player);
+                    break;
+                case "2":
+                    //Recipe();
+                    break;
+                case "3":
+                    //Inventory();
+                    break;
+                case "4":
+                    //Day();
+                    break;
+                default:
+                    Menu();
+                    break;
+                
+               
+            }
         }
 
 

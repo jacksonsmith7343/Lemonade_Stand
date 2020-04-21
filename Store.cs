@@ -13,6 +13,7 @@ namespace LemonadeStand_3DayStarter
         private double pricePerSugarCube;
         private double pricePerIceCube;
         private double pricePerCup;
+        
 
         // constructor (SPAWNER)
         public Store()
@@ -21,14 +22,44 @@ namespace LemonadeStand_3DayStarter
             pricePerSugarCube = .1;
             pricePerIceCube = .01;
             pricePerCup = .25;
+            
+
+
+
+
         }
 
-        public void StoreMenu()
+        public void StoreMenu(Player player)
         {
-            //cw options
-            //get user input
-            //swtich case
-            //based user input is call certain Sell.. method
+            Console.WriteLine("What would you like to do? \n1) Buy lemons? \n2Buy sugar? \n3) Buy ice?\n4) Buy cups? \n5) Return to main menu?");
+            string userInput = Console.ReadLine();
+            switch (userInput)
+            {
+                case "1":
+                    SellLemons(player); 
+                    break;
+                case "2":
+                    SellSugarCubes(player);
+                    break;
+                case "3":
+                    SellIceCubes(player);
+                    break;
+                case "4":
+                    SellCups(player);
+                    break;
+                case "5":
+                    //Menu(player);
+                default:
+                    Console.WriteLine("Try again. Choose an item to purshase or return to the main menu.");
+                    StoreMenu(player);
+                    break;
+                    //cw options
+                    //get user input
+                    //swtich case
+                    //based user input is call certain Sell.. method
+            }
+
+
         }
 
         // member methods (CAN DO)
