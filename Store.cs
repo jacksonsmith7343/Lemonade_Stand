@@ -48,7 +48,7 @@ namespace LemonadeStand_3DayStarter
                     SellCups(player);
                     break;
                 case "5":
-                    //Menu(player);
+                    //Menu();
                 default:
                     Console.WriteLine("Try again. Choose an item to purshase or return to the main menu.");
                     StoreMenu(player);
