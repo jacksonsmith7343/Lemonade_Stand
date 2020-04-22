@@ -27,6 +27,10 @@ namespace LemonadeStand_3DayStarter
         public void CheckInventory(Player player)
         {
             Console.WriteLine("Your inventory has:");
+            Console.WriteLine(player.inventory.lemons.Count + "lemons");
+            Console.WriteLine(player.inventory.iceCubes.Count + "ice cubes");
+            Console.WriteLine(player.inventory.sugarCubes.Count + "sugar cubes");
+            Console.WriteLine(player.inventory.cups.Count + "cups");
         }
 
         public void AddLemonsToInventory(int numberOfLemons)

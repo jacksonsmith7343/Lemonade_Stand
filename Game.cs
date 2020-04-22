@@ -20,7 +20,6 @@ namespace LemonadeStand_3DayStarter
         public Game()
         {
             player = new Player();
-            //days = new List<Day>() {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" },
             demandOfProduct = .5;
 
         }
@@ -28,14 +27,19 @@ namespace LemonadeStand_3DayStarter
 
 
         //member methods (Can do)
-        //while(List<Day> days = new List<Day>){"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-            //foreach(Day.days in days){
+        
+        
+
         public void RunGame()
         {
-            Menu();
-            
-           
+            List<string> days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            for (int i = 0; 1 <= 7; i++)
+            {
+                Menu();
+
+            }
         }
+
 
         public void Menu()
         {
@@ -85,19 +89,7 @@ namespace LemonadeStand_3DayStarter
             
         }
 
-        public void DayOfWeek()
-        {
-            List<string> days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-            for (int i = 0; 1 <= 7; i++)
-            {
-                RunGame();
-             
-            }
-        }
-        
-
-        
-
+       
 
     }
 }
