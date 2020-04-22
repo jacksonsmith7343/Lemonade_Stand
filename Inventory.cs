@@ -24,9 +24,9 @@ namespace LemonadeStand_3DayStarter
         }
 
         // member methods (CAN DO)
-        public void CheckInventory()
+        public void CheckInventory(Player player)
         {
-
+            Console.WriteLine("Your inventory has:");
         }
 
         public void AddLemonsToInventory(int numberOfLemons)

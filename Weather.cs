@@ -31,7 +31,6 @@ namespace LemonadeStand_3DayStarter
         public void DailyTemperature()
         {
             temperature = rnd.Next(60, 90);
-            //TODO finish switch cases
             switch (condition)
             {
                 case "rain":
@@ -47,14 +46,8 @@ namespace LemonadeStand_3DayStarter
                     temperature = rnd.Next(40, 60);
                     break;
                
-
-
-
             }
         }
-
-       
-
         //member methods (Can do)
 
         public void DailyWeatherCondition()

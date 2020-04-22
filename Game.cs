@@ -13,22 +13,27 @@ namespace LemonadeStand_3DayStarter
         private List<Day> days;
         private int currentDay;
         public Store store;
+        public double demandOfProduct;
+        public Weather temperature;
 
         //constructor (Spawner)
         public Game()
         {
             player = new Player();
-            days = new List<Day>();
+            //days = new List<Day>() {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" },
+            demandOfProduct = .5;
 
         }
 
 
 
         //member methods (Can do)
+        //while(List<Day> days = new List<Day>){"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+            //foreach(Day.days in days){
         public void RunGame()
         {
             Menu();
-            //BeginDay();
+            
            
         }
 
@@ -48,20 +53,50 @@ namespace LemonadeStand_3DayStarter
                     break;
                 case "3":
                     Inventory inventory = new Inventory();
-                    inventory.CheckInventory();//this leads to an empty method
+                    inventory.CheckInventory(player);
                     break;
                 case "4":
                     Day day = new Day();
-                    day.BeginDay(); //this leads to an empty method
+                    day.BeginDay(player); //this leads to an empty method
                     break;
                 default:
                     Menu();
                     break;
-                
-               
             }
         }
 
+        public void DemandOfProduct()
+        {
+            double demandOfProduct = .5;
+            Weather weather = new Weather();
+            if (weather.temperature >= 80)
+            {
+               demandOfProduct += .10;
+            }
+            else if (weather.temperature <= 60)
+            {
+                demandOfProduct -= .10;
+            }
+            else
+            {
+                demandOfProduct = .5;
+            }
+            
+            
+        }
+
+        public void DayOfWeek()
+        {
+            List<string> days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            for (int i = 0; 1 <= 7; i++)
+            {
+                RunGame();
+             
+            }
+        }
+        
+
+        
 
 
     }

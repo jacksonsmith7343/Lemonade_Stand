@@ -23,7 +23,7 @@ namespace LemonadeStand_3DayStarter
         }
 
         //member methods (Can do)
-        public void BeginDay()
+        public void BeginDay(Player player)
         {
             weather.DailyTemperature();
             weather.DailyWeatherCondition();

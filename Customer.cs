@@ -26,10 +26,6 @@ namespace LemonadeStand_3DayStarter
 
         //member methods (Can do)
 
-        public void PurchaseLemons()
-        {
-            
-        }
 
     }
 }
