@@ -26,6 +26,9 @@ namespace LemonadeStand_3DayStarter
 
         //member methods (Can do)
 
+        //Create a method called MakeBuyChoice(Weather weather, Recipe recipe) { ... }
+        //try to come up with way using the wweather to generate a chance of buying for the customer
+
 
     }
 }

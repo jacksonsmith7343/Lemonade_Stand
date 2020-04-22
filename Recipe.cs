@@ -23,7 +23,7 @@ namespace LemonadeStand_3DayStarter
 
         }
 
-        public void CreateNewRecipe(Player player)
+        public void CreateNewRecipe()
         {
             Console.WriteLine("What would you like to change to your recipe?\n1) Change lemons? \n2 Change sugar? \n3) Change ice?\n4) Change price per cup");
             string userInput = Console.ReadLine();
