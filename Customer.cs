@@ -12,22 +12,41 @@ namespace LemonadeStand_3DayStarter
 
         private List<string> names;
         public string name;
-
+        public Random rnd;
+        public bool boughtLemonade;
+        
 
         //constructor (Spawner)
         public Customer()
         {
+            rnd = new Random();
 
-            names = new List<string>();
-            names.Add("Robert");
-            names.Add("Carol");
-            names.Add("Justin");
         }
 
         //member methods (Can do)
 
-        //Create a method called MakeBuyChoice(Weather weather, Recipe recipe) { ... }
-        //try to come up with way using the wweather to generate a chance of buying for the customer
+        public bool MakeBuyChoice(Weather weather, Recipe recipe)
+        {
+            
+            int i = 0;
+            if (weather.temperature >= 80 && recipe.pricePerCup <= .5)
+            {
+                 i = rnd.Next(4, 10);
+            }
+            if (weather.temperature <= 79 && recipe.pricePerCup >= .5)
+            {
+                 i = rnd.Next(0, 10);
+            }
+            if (i >= 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
 
     }

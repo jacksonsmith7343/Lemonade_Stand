@@ -31,7 +31,7 @@ namespace LemonadeStand_3DayStarter
 
         public void StoreMenu(Player player)
         {
-            Console.WriteLine("What would you like to do? \n1) Buy lemons? \n2) Buy sugar? \n3) Buy ice?\n4) Buy cups? \n5) Return to main menu?");
+            Console.WriteLine("What would you like to do? \n1) Buy lemons? \n2Buy sugar? \n3) Buy ice?\n4) Buy cups? \n5) Return to main menu?");
             string userInput = Console.ReadLine();
             switch (userInput)
             {
@@ -49,7 +49,7 @@ namespace LemonadeStand_3DayStarter
                     break;
                 case "5":
                     Game game = new Game();
-                    game.Menu();
+                    game.Menu(Day day);
                     break;
                 default:
                     Console.WriteLine("Try again. Choose an item to purshase or return to the main menu.");

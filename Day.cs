@@ -12,15 +12,17 @@ namespace LemonadeStand_3DayStarter
         public Weather weather;
         public List<Customer> customers;
         private Random rnd;
+        double dailyProfits;
 
         //constructor (Spawner)
 
         public Day()
         {
             weather = new Weather();
-            customers = new List<Customer>() { new Customer(), new Customer(), new Customer(), new Customer(), new Customer() };
+            customers = new List<Customer>() { new Customer(), new Customer(), new Customer(), new Customer(), new Customer()};
             rnd = new Random();
             GenerateCustomers();
+            dailyProfits = 0;
 
         }
 
@@ -34,17 +36,30 @@ namespace LemonadeStand_3DayStarter
 
             
         }
-        //Create a method that generates a random number
-        //write a for loop that runs for the amount of the random number
-        //on each iteration of the loop, inside of the loop, add a new Customer object to the list of customers
-
-
+        
         //member methods (Can do)
-        public void BeginDay(Player player)
+        public void SimulateDay(Player player)
         {
             
-            //weather.DailyTemperature();
-            //weather.DailyWeatherCondition();
+            for (int i = 0; i <= customers.Count; i++)
+            {
+                bool decision = customers[i].MakeBuyChoice(weather, player.recipe);
+                if (decision == true)
+                {
+                    player.pitcher.cupsLeftInPitcher -= 1;
+                    player.wallet.Money += player.recipe.pricePerCup;
+                    dailyProfits += player.recipe.pricePerCup;
+                }
+                else
+                {
+                    
+                }
+              
+
+            }
+            
+            
+
             //loop over customers list
             //for each customer, call their MakeChoice method
             //if the method returns true, take a cup away from the pitcher and give the player the money from the customer based on the cost per cup from the recipe

@@ -24,14 +24,9 @@ namespace LemonadeStand_3DayStarter
         }
 
 
-
         //member methods (Can do)
-        
-        
-
         public void RunGame()
         {
-           // List<string> days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
             for (int i = 0; i < days.Count; i++)
             {
                 Console.WriteLine("Current Day: " + i);
@@ -57,21 +52,25 @@ namespace LemonadeStand_3DayStarter
                     player.inventory.CheckInventory();
                     break;
                 case "4":
-                    day.SimulateDay(player); //this leads to an empty method
+                    day.SimulateDay(player); 
                     break;
                 default:
                     Menu(day);
                     break;
             }
         }
+        public void DailyDisplayProfit(Player player) //get called once the SimulateGame completes?
+        {
+            for (int i = 0; i <= days.Count; i++)
+            {
+               Console.WriteLine(MakeBuyChoice.true * recipe.pricePerCup); 
+            }
+              
+        }
+        public void DisplayLoss()
+        {
 
-        //public double DisplayProfitAndLoss()
-        //{
-        //    //for (List<string> days) ;
-        //    {
-        //        Console.WriteLine(moneyMadeForTheDay -= player.wallet.Money);
-        //    }
-        //}
+        }
 
 
     }

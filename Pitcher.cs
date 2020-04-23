@@ -10,6 +10,14 @@ namespace LemonadeStand_3DayStarter
     {
         public int cupsLeftInPitcher;
 
+        public Pitcher()
+        {
+
+        }
+
+
+        //member methods (Can do)
+
 
     }
 }
