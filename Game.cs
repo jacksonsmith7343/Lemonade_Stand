@@ -59,14 +59,7 @@ namespace LemonadeStand_3DayStarter
                     break;
             }
         }
-        public void DailyDisplayProfit(Player player) //get called once the SimulateGame completes?
-        {
-            for (int i = 0; i <= days.Count; i++)
-            {
-               Console.WriteLine(MakeBuyChoice.true * recipe.pricePerCup); 
-            }
-              
-        }
+       
         public void DisplayLoss()
         {
 

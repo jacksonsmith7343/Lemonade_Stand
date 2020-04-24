@@ -57,14 +57,9 @@ namespace LemonadeStand_3DayStarter
               
 
             }
-            
-            
-
-            //loop over customers list
-            //for each customer, call their MakeChoice method
-            //if the method returns true, take a cup away from the pitcher and give the player the money from the customer based on the cost per cup from the recipe
-            //if the method returns false, dont do anything and let the loop move to the next customer
+            Console.WriteLine($"Today's profits are {dailyProfits}");
+      
         }
-
+       
     }
 }
